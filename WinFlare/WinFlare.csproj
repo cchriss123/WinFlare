@@ -10,17 +10,19 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\icon.ico" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="Resources\icon.ico">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Resources\icon.ico">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Resources\search.ico">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Resources\search_transparent.ico">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>

@@ -12,6 +12,12 @@ namespace WinFlare
             mainWindow.Show(); 
             mainWindow.Activate(); 
 
+
+            Console.WriteLine("WinFlare started successfully.");
+            Console.WriteLine("Cash Locations: " + string.Join(", ", Casher.CashLocations()));
+
+
+
             mainWindow.StateChanged += (s, args) =>
             {
                 if (mainWindow.WindowState == WindowState.Minimized)
@@ -31,9 +37,7 @@ namespace WinFlare
             {
                 mainWindow.Show();
                 mainWindow.WindowState = WindowState.Normal;
-                mainWindow.Topmost = true;
                 mainWindow.Activate();
-                mainWindow.Topmost = false;
             };
 
         }
